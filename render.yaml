@@ -1,0 +1,51 @@
+services:
+  - type: web
+    name: bastra-shoily
+    env: node
+    plan: starter
+    region: singapore
+    buildCommand: npm install --include=dev && npm run build
+    startCommand: npm start
+    disk:
+      name: bastra-data
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: NODE_VERSION
+        value: "22.14.0"
+      - key: NODE_ENV
+        value: "production"
+      - key: DATA_DIR
+        value: "/var/data"
+      - key: DB_PATH
+        value: "/var/data/bastra_shoily.sqlite"
+      - key: REQUIRE_EXISTING_DB
+        value: "false"
+      - key: OTP_SECRET
+        generateValue: true
+      - key: DATABASE_URL
+        sync: false
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_ANON_KEY
+        sync: false
+      - key: INITIAL_ADMIN_PASSWORD
+        sync: false
+      - key: ADMIN_RECOVERY_KEY
+        sync: false
+      # Email Provider (Configure either SMTP or Resend in Render Dashboard)
+      - key: SMTP_HOST
+        sync: false
+      - key: SMTP_USER
+        sync: false
+      - key: SMTP_PASS
+        sync: false
+      - key: RESEND_API_KEY
+        sync: false
+      # Bangladesh SMS Gateway (Configure one in Render Dashboard)
+      - key: GREENWEB_SMS_TOKEN
+        sync: false
+      - key: ALPHA_SMS_API_KEY
+        sync: false
+      - key: BULKSMSBD_API_KEY
+        sync: false

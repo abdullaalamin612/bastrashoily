@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 160" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Royal Gold Gradient -->
+    <linearGradient id="goldGradLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCD34D" />
+      <stop offset="30%" stop-color="#F59E0B" />
+      <stop offset="70%" stop-color="#D97706" />
+      <stop offset="100%" stop-color="#FBBF24" />
+    </linearGradient>
+
+    <filter id="softGlowLight" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#F59E0B" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Left Emblem Group -->
+  <g transform="translate(18, 12)">
+    <!-- Outer Arc (White on dark) -->
+    <path d="M 68 8 A 54 54 0 1 0 86 102 C 60 114 26 102 14 74 C 2 46 16 16 48 4 C 54 2 62 4 68 8 Z" fill="#F3F4F6" />
+    <!-- Golden Head Dot -->
+    <circle cx="68" cy="24" r="7" fill="url(#goldGradLight)" filter="url(#softGlowLight)" />
+    <!-- Stylized Fold / Figure Swirl (Gold) -->
+    <path d="M 68 34 C 64 48 58 66 48 80 C 44 86 38 90 32 92 C 34 82 40 70 48 56 C 54 46 62 38 68 34 Z" fill="url(#goldGradLight)" />
+    <path d="M 72 38 C 76 56 78 76 74 94 C 70 82 66 66 62 52 C 66 46 70 42 72 38 Z" fill="url(#goldGradLight)" />
+    <path d="M 76 44 C 84 60 90 76 92 90 C 86 82 80 70 76 56 Z" fill="url(#goldGradLight)" opacity="0.9" />
+    <!-- Inner Calligraphic Flourish -->
+    <path d="M 40 50 C 42 64 36 78 24 88 C 28 80 32 68 34 58 C 36 54 38 52 40 50 Z" fill="#1C1917" opacity="0.8" />
+    <path d="M 38 62 Q 52 50 62 66 Q 50 82 36 78 Z" fill="#F3F4F6" opacity="0.95" />
+  </g>
+
+  <!-- Main Bengali Typography: "বস্ত্র শৈলী" -->
+  <!-- "বস্ত্র" in White -->
+  <g fill="#FFFFFF">
+    <text x="145" y="98" font-family="'Hind Siliguri', 'Galada', 'Noto Sans Bengali', 'SolaimanLipi', sans-serif" font-size="74" font-weight="900" letter-spacing="-1.5">
+      বস্ত্র
+    </text>
+  </g>
+
+  <!-- "শৈলী" in Royal Gold -->
+  <g fill="url(#goldGradLight)" filter="url(#softGlowLight)">
+    <text x="282" y="98" font-family="'Hind Siliguri', 'Galada', 'Noto Sans Bengali', 'SolaimanLipi', sans-serif" font-size="74" font-weight="900" letter-spacing="-1">
+      শৈলী
+    </text>
+  </g>
+
+  <!-- Ornamental Golden Divider Line with loop curls underneath -->
+  <g stroke="url(#goldGradLight)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <line x1="145" y1="126" x2="270" y2="126" />
+    <circle cx="282" cy="126" r="2.5" fill="url(#goldGradLight)" />
+    <path d="M 288 126 C 291 122, 296 122, 299 126 C 302 130, 307 130, 310 126" />
+    <circle cx="316" cy="126" r="2.5" fill="url(#goldGradLight)" />
+    <line x1="328" y1="126" x2="480" y2="126" />
+  </g>
+</svg>
